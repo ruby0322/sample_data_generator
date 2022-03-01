@@ -1,0 +1,13 @@
+{
+    "output_folder_path": "outputs",
+    "delimiter": ", ",
+    "delimiters": "+-*/",
+    "multiple_delimiters": true,
+    "number_cnt_per_line": 3,
+    "line_cnt": 100,
+    "upper_bound": 100,
+    "lower_bound": -100,
+    "number_type": 1,
+    "number_step": 0.01,
+    "decimal_cnt": 2
+}
