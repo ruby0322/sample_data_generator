@@ -1,7 +1,12 @@
 {
     "output_folder_path": "outputs",
     "delimiter": ", ",
-    "delimiters": "+-*/",
+    "delimiters": [
+        "+",
+        "-",
+        "*",
+        "/"
+    ],
     "multiple_delimiters": true,
     "number_cnt_per_line": 3,
     "line_cnt": 100,
