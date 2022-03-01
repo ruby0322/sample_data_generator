@@ -18,7 +18,14 @@ if __name__ == '__main__':
     logger.log(f'Generating sample data...')
     if config.multiple_delimiters:
         for i in range(config.line_cnt):
-            writer.write_line(random.choice(config.delimiters).join(list(map(str, [generator.generate() for _ in range(config.number_cnt_per_line)]))))
+            line: str = ''
+            nums: list[str] = [generator.generate() for _ in range(config.number_cnt_per_line)]
+            is_first: bool = True
+            for num in nums:
+                if not is_first: line += random.choice(config.delimiters)
+                else: is_first = False
+                line += num
+            writer.write_line(line)
     else:
         for i in range(config.line_cnt):
             writer.write_line(config.delimiter.join(list(map(str, [generator.generate() for _ in range(config.number_cnt_per_line)]))))
